@@ -78,7 +78,7 @@ if __name__ == '__main__':
     tree = ast.parse(source)
 
     txt_tree = ast2txt(tree)
-    print(txt_tree)
+    print txt_tree
 
     # round-trip source
     rt_source = txt2src(txt_tree) 
