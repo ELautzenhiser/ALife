@@ -25,10 +25,16 @@ def getValidFileFromUser():
             break
     return f, filename
 
+def removeGeneInfo(contents_list):
+    contents_list = contents_list[2:]
+    contents = '\n'.join(contents_list)
+    return contents
+
 
 if __name__ == '__main__':
     f, filename = getValidFileFromUser()
-    filetext = f.read()
+    contents_list = f.readlines()
+    filetext = removeGeneInfo(contents_list)
     tree = ast.parse(filetext)
 
     astfilename = pyToTxt(filename)
