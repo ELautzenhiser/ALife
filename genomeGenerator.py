@@ -101,11 +101,15 @@ def getTree(position, genome_str, gene_dict, codon_length=3):
     node = gene_dict[codon]
     position += codon_length
     node_list = []
-    if node != '{}':
-        for i in range(node.count('{}')):
-            subnode, position = getTree(position, genome_str, gene_dict, codon_length)
-            node_list.append(subnode)
+    num_subnodes = node.replace('{{','').replace('}}','').count('{}')
+    for i in range(num_subnodes):
+        subnode, position = getTree(position, genome_str, gene_dict, codon_length)
+        node_list.append(subnode)
+    try:
         node = node.format(*node_list)
+    except Exception as e:
+        print 'Node:', node, ' - subnodes:', node_list
+        node = '# Error - Gene could not be transcribed'
     return node, position
 
 
