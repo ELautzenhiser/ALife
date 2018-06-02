@@ -1,5 +1,5 @@
 import ast
-from makeAST import getValidFileFromUser
+from makeAST import getValidPyFile
 from ast2txt import ast2txt
 from difflib import unified_diff
 
@@ -72,7 +72,7 @@ def txt2src(txt_str):
     return output
         
 if __name__ == '__main__':
-    f, filename = getValidFileFromUser()
+    f, filename = getValidPyFile('000_aaaaaaaa.py')
     source = f.read()
     f.close()
     tree = ast.parse(source)

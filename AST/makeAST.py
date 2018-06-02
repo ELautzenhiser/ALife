@@ -7,9 +7,10 @@ def pyToTxt(filename):
         filename = filename[:-3] + '.txt'
     return filename
 
-def getValidFileFromUser():
-    filename = None
-    if len(sys.argv) > 1:
+def getValidPyFile(filename=''):
+    if filename:
+        pass
+    elif len(sys.argv) > 1:
         filename = sys.argv[1]
     else:
         filename = raw_input('Please enter the filename of a python script: ')
@@ -32,13 +33,11 @@ def removeGeneInfo(contents_list):
 
 
 if __name__ == '__main__':
-    f, filename = getValidFileFromUser()
+    f, filename = getValidPyFile()
     contents_list = f.readlines()
     filetext = removeGeneInfo(contents_list)
     tree = ast.parse(filetext)
-
     astfilename = pyToTxt(filename)
     astfile = open(astfilename, 'w')
-
     ast_text = ast2txt(tree)
     astfile.write(ast_text)
