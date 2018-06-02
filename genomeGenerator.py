@@ -53,7 +53,7 @@ def list2dicts(gene_list, codon_length=3):
     codon_count = 0
     code2str_dict = {}
     for node in gene_list:
-        node = node.strip()
+        node = node.strip('\n')
         if node not in code2str_dict:
             codon = str(codon_count)
             codon = (codon_length - len(codon))*'0' + codon
@@ -75,7 +75,7 @@ def txt2list(file_name='genomeAST.txt'):
             gene_list = genome_file.readlines()
         except Exception as e:
             print e
-            file_name = raw_input('Which text file has the genome AST?')
+            file_name = raw_input('Which text file has the genome AST? ')
     return gene_list
 
 
@@ -86,7 +86,7 @@ Called by: makeOrganism
 def list2str(gene_list, gene_dict):
     genome_str = ''
     for gene in gene_list:
-        gene = gene.strip()
+        gene = gene.strip('\n')
         genome_str += gene_dict[gene]
     return genome_str
 
