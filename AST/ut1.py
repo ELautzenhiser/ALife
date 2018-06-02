@@ -1,5 +1,5 @@
 import ast
-from makeAST import getValidPyFile
+from makeAST import getValidPyFile,removeGeneInfo
 from ast2txt import ast2txt
 from difflib import unified_diff
 
@@ -73,7 +73,8 @@ def txt2src(txt_str):
         
 if __name__ == '__main__':
     f, filename = getValidPyFile('000_aaaaaaaa.py')
-    source = f.read()
+    source_list = f.readlines()
+    source = removeGeneInfo(source_list)
     f.close()
     tree = ast.parse(source)
 

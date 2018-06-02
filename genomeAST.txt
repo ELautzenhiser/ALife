@@ -8,10 +8,9 @@ os
 {},{}
 json
 subprocess
-#################################getTraits
 def {}({}):
 getTraits
- 
+
 global {}
 metabolism
 global {}
@@ -24,49 +23,52 @@ global {}
 sightDistance
 {} = {}
 metabolism
-.5
+0.5
 {} = {}
 codonLength
 3
 {} = {}
 selfName
 {}[{}]
-{}.split({})
+{}({})
+{}.{}
 {}[{}]
-{}.split({})
+{}({})
+{}.{}
 {}[{}]
-sys.argv
+{}.{}
+sys
+argv
 0
-"{}"
+split
+'{}'
 \\
--{}
-1
-"{}"
+-1
+split
+'{}'
 /
--{}
-1
+-1
 {} = {}
 world
 {}({})
-os.getcwd
- 
+{}.{}
+os
+getcwd
+
 {} = {}
 sightDistance
 300
 dedent
-#################################GetTree
 def {}({}):
 getTree
-{},{}
 position
-container
 {} = {}
 codon
 {}[{}]
 genome
 {}:{}
 position
-{} + {}
+({}+{})
 position
 codonLength
 {} = {}
@@ -79,72 +81,84 @@ position
 codonLength
 {} = {}
 newContainer
-[]
+[{}]
+
 if {}:
 {} != {}
 aacid
 '{}'
-{}
+{{}}
 for {} in {}:
 i
-range({})
-{}.count({})
+{}({})
+range
+{}({})
+{}.{}
 aacid
+count
 '{}'
-{}
+{{}}
 {} = {}
+({})
 {},{}
 value
 position
 {}({})
 getTree
-{},{}
 position
+{}({})
+{}.{}
 newContainer
-{}.append({})
-newContainer
+append
 value
 dedent
 {} = {}
 aacid
-{}.format(*{})
+{}({})
+{}.{}
 aacid
+format
+*{}
 newContainer
 dedent
 return {}
+({})
 {},{}
 aacid
 position
 dedent
-#################################Translate
 def {}({}):
 translate
 
 {} = {}
 output
-''
+'{}'
+
 {} = {}
-codeList
-[]
+code_list
+[{}]
+
 {} = {}
 position
 0
 while {}:
 {} < {}
 position
-len({})
+{}({})
+len
 genome
 {} = {}
+({})
 {},{}
 value
 position
 {}({})
 getTree
-{},{}
 position
-codeList
-{}.append({})
-codeList
+{}({})
+{}.{}
+code_list
+append
 value
 dedent
 {} = {}
@@ -152,7 +166,7 @@ indent
 0
 for {} in {}:
 line
-codeList
+code_list
 if {}:
 {} == {}
 {}[{}]
@@ -162,14 +176,14 @@ line
 :
 {} += {}
 output
-{} + {}
+({}+{})
+({}+{})
 '{}'
 \n
-{}*{}
-' '
-{}+{}
-({})
-{}*{}
+({}*{})
+'{}'
+ 
+({}*{})
 5
 indent
 line
@@ -177,7 +191,8 @@ line
 indent
 1
 dedent
-elif {}:
+else:
+if {}:
 {} == {}
 line
 '{}'
@@ -189,23 +204,23 @@ dedent
 else:
 {} += {}
 output
-{} + {}
+({}+{})
+({}+{})
 '{}'
 \n
-{}*{}
-' '
-{}+{}
-({})
-{}*{}
+({}*{})
+'{}'
+ 
+({}*{})
 5
 indent
 line
 dedent
 dedent
+dedent
 return {}
 output
 dedent
-#################################getRandomString
 def {}({}):
 getRandomString
 {},{}
@@ -221,7 +236,8 @@ chars
 '{}'
 abcdefghijklmnopqrstuvwxyz
 dedent
-elif {}:
+else:
+if {}:
 {} == {}
 kind
 '{}'
@@ -237,25 +253,30 @@ chars
 '{}'
 0123456789abcdefghijklmnopqrstuvwxyz
 dedent
+dedent
 {} = {}
 string
-''
+'{}'
+
 for {} in {}:
 i
-range({})
+{}({})
+range
 length
 {} += {}
 string
-random.choice({})
+{}({})
+{}.{}
+random
+choice
 chars
 dedent
 return {}
 string
 dedent
-#################################makeOffspring
 def {}({}):
 makeOffspring
- 
+
 {} = {}
 locationID
 {}({})
@@ -274,12 +295,12 @@ getRandomString
 alphanumeric
 {} = {}
 offspringName
-{} + {}
+({}+{})
+({}+{})
+({}+{})
 locationID
-{} + {}
 '{}'
 _
-{} + {}
 uniqueID
 '{}'
 .py
@@ -291,54 +312,54 @@ open
 offspringName
 '{}'
 w
-{}.{}({})
+{}({})
+{}.{}
 offspring
 write
-{} + {}
+({}+{})
 '{}'
-{} = {}
-translation
- 
+translation = 
 {}({})
 str
 translation
-{}.{}({})
+{}({})
+{}.{}
 offspring
 write
-{} + {}
+({}+{})
+({}+{})
+({}+{})
 '{}'
 \n
-{} + {}
 '{}'
-{} = {}
-genome
-"
-{} + {}
+genome = \"
 genome
 '{}'
-"
-{}.{}({})
+\"
+{}({})
+{}.{}
 offspring
 write
 {}({})
 translate
- 
-{}.{}({})
+
+{}({})
+{}.{}
 offspring
 close
- 
+
 dedent
-#################################splitName
 def {}({}):
 splitName
 name
 return {}
-{}.split({})
+{}({})
+{}.{}
 name
-"{}"
+split
+'{}'
 _
 dedent
-#################################intToString
 def {}({}):
 intToString
 {},{}
@@ -346,58 +367,64 @@ num
 length
 {} = {}
 num
-str({})
+{}({})
+str
 num
 for {} in {}:
 i
-range({})
-{} - {}
+{}({})
+range
+({}-{})
 length
-len({})
+{}({})
+len
 num
 {} = {}
 num
-{} + {}
-"{}"
+({}+{})
+'{}'
 0
 num
 dedent
 return {}
 num
 dedent
-#################################getNewPosition
 def {}({}):
 getNewPosition
 {},{}
 position
 direction
 return {}
-{} % {}
-({})
-{} + {}
-int({})
+({}%{})
+({}+{})
+{}({})
+int
 position
 direction
 1000
 dedent
-#################################move
 def {}({}):
 move
 distance
 global {}
 selfName
 {} = {}
+({})
 {},{}
 position
 uniqueID
-{}.split({})
+{}({})
+{}.{}
 selfName
-"{}"
+split
+'{}'
 _
 if {}:
 {} < {}
-random.random
-.5
+{}.{}
+random
+random
+0.5
 {} = {}
 direction
 1
@@ -405,12 +432,12 @@ dedent
 else:
 {} = {}
 direction
--{}
-1
+-1
 dedent
 for {} in {}:
 i
-range({})
+{}({})
+range
 distance
 {} = {}
 position
@@ -425,13 +452,17 @@ direction
 3
 {} = {}
 newName
-{} + {}
+({}+{})
+({}+{})
 position
-{} + {}
-"{}"
+'{}'
 _
 uniqueID
-os.rename({},{})
+{}({})
+{}.{}
+os
+rename
+{},{}
 selfName
 newName
 {} = {}
@@ -439,20 +470,28 @@ selfName
 newName
 dedent
 dedent
-#################################tryToMove
 def {}({}):
 tryToMove
- 
+
 if {}:
 {} < {}
-random.random()
+{}({})
+{}.{}
+random
+random
+
 metabolism
 {} = {}
 distance
-int({})
-{}*{}
+{}({})
+int
+({}*{})
 metabolism
-random.uniform({},{})
+{}({})
+{}.{}
+random
+uniform
+{},{}
 1
 100
 {}({})
@@ -460,19 +499,20 @@ move
 distance
 dedent
 dedent
-#################################initiateInteraction
 def {}({}):
 initiateInteraction
 organisms
 {} = {}
 otherName
-random.choice({})
+{}({})
+{}.{}
+random
+choice
 organisms
 {}({})
 interact
 otherName
 dedent
-#################################interact
 def {}({}):
 interact
 otherName
@@ -480,15 +520,50 @@ otherName
 message
 {}({})
 getMessage
- 
+
 {} = {}
 otherOrganism
-subprocess.Popen(["python",{}],bufsize=1,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,universal_newlines=True)
+{}({})
+{}.{}
+subprocess
+Popen
+{},{}
+[{}]
+{},{}
+'{}'
+python
 otherName
+{},{}
+{}={}
+bufsize
+1
+{},{}
+{}={}
+stdin
+{}.{}
+subprocess
+PIPE
+{},{}
+{}={}
+stdout
+{}.{}
+subprocess
+PIPE
+{},{}
+{}={}
+stderr
+{}.{}
+subprocess
+PIPE
+{}={}
+universal_newlines
+True
 {} = {}
 fullResponse
-{}.communicate({})
+{}({})
+{}.{}
 otherOrganism
+communicate
 message
 {} = {}
 parsedResponse
@@ -496,61 +571,67 @@ parsedResponse
 fullResponse
 0
 dedent
-#################################getMessage
 def {}({}):
 getMessage
- 
+
 {} = {}
 message
-dict({})
- 
+{}({})
+dict
+
 {} = {}
 {}[{}]
 message
-"{}"
+'{}'
 acting_organism
 selfName
 return {}
-json.dumps({})
+{}({})
+{}.{}
+json
+dumps
 message
 dedent
-#################################getAllOrganisms
 def {}({}):
 getAllOrganisms
 world
 {} = {}
 organisms
 [{}]
- 
+
 for {} in {}:
 organism
-os.listdir({})
+{}({})
+{}.{}
+os
+listdir
 world
 if {}:
 {} == {}
 {}[{}]
 organism
 {}:{}
--{}
-3
- 
-"{}"
+-3
+
+'{}'
 .py
-{}.append({})
+{}({})
+{}.{}
 organisms
+append
 organism
 dedent
 dedent
 return {}
 organisms
 dedent
-#################################findNearbyOrganisms
 def {}({}):
 findNearbyOrganisms
 organisms
 {} = {}
 location
-int({})
+{}({})
+int
 {}[{}]
 {}({})
 splitName
@@ -559,7 +640,7 @@ selfName
 {} = {}
 nearby
 [{}]
- 
+
 for {} in {}:
 organism
 organisms
@@ -569,31 +650,35 @@ organism
 selfName
 {} = {}
 organismLocation
-int({})
+{}({})
+int
 {}[{}]
 {}({})
 splitName
 organism
 0
 if {}:
-{} or {}
+({} or {})
 {} < {}
-abs({})
-{} - {}
+{}({})
+abs
+({}-{})
 organismLocation
 location
 sightDistance
 {} > {}
-abs({})
-{} - {}
+{}({})
+abs
+({}-{})
 organismLocation
 location
-({})
-{} - {}
+({}-{})
 1000
 sightDistance
-{}.append({})
+{}({})
+{}.{}
 nearby
+append
 organism
 dedent
 dedent
@@ -601,52 +686,60 @@ dedent
 return {}
 nearby
 dedent
-#################################main
 {}({})
 getTraits
- 
+
 {} = {}
 startConditions
-raw_input({})
- 
+{}({})
+raw_input
+
 try:
 {} = {}
 startConditions
-json.loads({})
+{}({})
+{}.{}
+json
+loads
 startConditions
 dedent
-except:
+except{}:
+
 {} = {}
 startConditions
-dict({})
- 
+{}({})
+dict
+
 dedent
 if {}:
 {} != {}
-type({})
+{}({})
+type
 startConditions
 dict
 {} = {}
 startConditions
-dict({})
- 
+{}({})
+dict
+
 dedent
 if {}:
 {} == {}
-{}.get({})
+{}({})
+{}.{}
 startConditions
-"{}"
+get
+'{}'
 acting_organism
 None
 {}({})
 tryToMove
- 
+
 {} = {}
 organisms
 {}({})
 getAllOrganisms
 world
-organisms.remove("genomeGenerator.py")
 {} = {}
 nearby
 {}({})
@@ -660,13 +753,14 @@ nearby
 dedent
 {}({})
 makeOffspring
- 
+
 dedent
 else:
 {}({})
 tryToMove
- 
+
 print {}
 {}({})
 getMessage
- 
+
+dedent

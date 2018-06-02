@@ -161,7 +161,7 @@ Takes a genome string, string to code dictionary, file contents, and name parts 
 Called by: makeOrganism
 """
 def makeOrganismFile(genome_str, gene_dict, organism_code, location_id='000', unique_id='aaaaaaaa'):
-    organism_name = location_id + '_' + unique_id + '.py'
+    organism_name = 'Organisms/' + location_id + '_' + unique_id + '.py'
     organism = open(organism_name, 'w')
     organism.write('translation = ' + str(gene_dict))
     organism.write('\n' + 'genome = \'' + genome_str + '\'')
