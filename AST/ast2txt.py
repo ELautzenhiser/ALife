@@ -29,7 +29,7 @@ def ast2txt(tree, ast_str=''):
     if isinstance(tree, ast.FunctionDef):
         for decorator in tree.decorator_list:
             ast_str += '@{}\n' + decorator.id + '\n'
-        ast_str += 'def {}({}):\n'
+        ast_str += '\ndef {}({}):\n'
         ast_str += ast2txt(tree.name)
         ast_str += ast2txt(tree.args)
         for node in tree.body:
@@ -112,7 +112,7 @@ def ast2txt(tree, ast_str=''):
 
     # binary operations
     if isinstance(tree, ast.BinOp):
-        ast_str += '({}' + operators[type(tree.op)] + '{})\n'
+        ast_str += '({} ' + operators[type(tree.op)] + ' {})\n'
         ast_str += ast2txt(tree.left)
         ast_str += ast2txt(tree.right)
         return ast_str

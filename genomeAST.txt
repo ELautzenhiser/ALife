@@ -1,13 +1,14 @@
 import {}
-{},{}
+{}, {}
 sys
-{},{}
+{}, {}
 random
-{},{}
+{}, {}
 os
-{},{}
+{}, {}
 json
 subprocess
+
 def {}({}):
 getTraits
 
@@ -59,6 +60,7 @@ getcwd
 sightDistance
 300
 dedent
+
 def {}({}):
 getTree
 position
@@ -68,7 +70,7 @@ codon
 genome
 {}:{}
 position
-({}+{})
+({} + {})
 position
 codonLength
 {} = {}
@@ -83,24 +85,38 @@ codonLength
 newContainer
 [{}]
 
-if {}:
-{} != {}
+{} = {}
+num_subacids
+{}({})
+{}.{}
+{}({})
+{}.{}
+{}({})
+{}.{}
 aacid
+replace
+{}, {}
+'{}'
+{{{{
+'{}'
+
+replace
+{}, {}
+'{}'
+}}}}
+'{}'
+
+count
 '{}'
 {{}}
 for {} in {}:
 i
 {}({})
-range
-{}({})
-{}.{}
-aacid
-count
-'{}'
-{{}}
+xrange
+num_subacids
 {} = {}
 ({})
-{},{}
+{}, {}
 value
 position
 {}({})
@@ -112,6 +128,7 @@ newContainer
 append
 value
 dedent
+try:
 {} = {}
 aacid
 {}({})
@@ -121,12 +138,22 @@ format
 *{}
 newContainer
 dedent
+except{}:
+
+{} = {}
+aacid
+({} + {})
+'{}'
+#
+aacid
+dedent
 return {}
 ({})
-{},{}
+{}, {}
 aacid
 position
 dedent
+
 def {}({}):
 translate
 
@@ -149,7 +176,7 @@ len
 genome
 {} = {}
 ({})
-{},{}
+{}, {}
 value
 position
 {}({})
@@ -169,6 +196,18 @@ line
 code_list
 if {}:
 {} == {}
+{}({})
+len
+line
+0
+{} += {}
+output
+'{}'
+\n
+dedent
+else:
+if {}:
+{} == {}
 {}[{}]
 line
 -1
@@ -176,15 +215,15 @@ line
 :
 {} += {}
 output
-({}+{})
-({}+{})
+({} + {})
+({} + {})
 '{}'
 \n
-({}*{})
+({} * {})
 '{}'
  
-({}*{})
-5
+({} * {})
+4
 indent
 line
 {} += {}
@@ -200,30 +239,39 @@ dedent
 {} -= {}
 indent
 1
+{} = {}
+indent
+{}({})
+max
+{}, {}
+indent
+0
 dedent
 else:
 {} += {}
 output
-({}+{})
-({}+{})
+({} + {})
+({} + {})
 '{}'
 \n
-({}*{})
+({} * {})
 '{}'
  
-({}*{})
-5
+({} * {})
+4
 indent
 line
+dedent
 dedent
 dedent
 dedent
 return {}
 output
 dedent
+
 def {}({}):
 getRandomString
-{},{}
+{}, {}
 length
 kind
 if {}:
@@ -274,6 +322,7 @@ dedent
 return {}
 string
 dedent
+
 def {}({}):
 makeOffspring
 
@@ -281,7 +330,7 @@ makeOffspring
 locationID
 {}({})
 getRandomString
-{},{}
+{}, {}
 3
 '{}'
 numbers
@@ -289,15 +338,15 @@ numbers
 uniqueID
 {}({})
 getRandomString
-{},{}
+{}, {}
 8
 '{}'
 alphanumeric
 {} = {}
 offspringName
-({}+{})
-({}+{})
-({}+{})
+({} + {})
+({} + {})
+({} + {})
 locationID
 '{}'
 _
@@ -308,7 +357,7 @@ uniqueID
 offspring
 {}({})
 open
-{},{}
+{}, {}
 offspringName
 '{}'
 w
@@ -316,7 +365,7 @@ w
 {}.{}
 offspring
 write
-({}+{})
+({} + {})
 '{}'
 translation = 
 {}({})
@@ -326,9 +375,9 @@ translation
 {}.{}
 offspring
 write
-({}+{})
-({}+{})
-({}+{})
+({} + {})
+({} + {})
+({} + {})
 '{}'
 \n
 '{}'
@@ -349,6 +398,7 @@ offspring
 close
 
 dedent
+
 def {}({}):
 splitName
 name
@@ -360,9 +410,10 @@ split
 '{}'
 _
 dedent
+
 def {}({}):
 intToString
-{},{}
+{}, {}
 num
 length
 {} = {}
@@ -373,15 +424,15 @@ num
 for {} in {}:
 i
 {}({})
-range
-({}-{})
+xrange
+({} - {})
 length
 {}({})
 len
 num
 {} = {}
 num
-({}+{})
+({} + {})
 '{}'
 0
 num
@@ -389,20 +440,22 @@ dedent
 return {}
 num
 dedent
+
 def {}({}):
 getNewPosition
-{},{}
+{}, {}
 position
 direction
 return {}
-({}%{})
-({}+{})
+({} % {})
+({} + {})
 {}({})
 int
 position
 direction
 1000
 dedent
+
 def {}({}):
 move
 distance
@@ -410,7 +463,7 @@ global {}
 selfName
 {} = {}
 ({})
-{},{}
+{}, {}
 position
 uniqueID
 {}({})
@@ -437,23 +490,23 @@ dedent
 for {} in {}:
 i
 {}({})
-range
+xrange
 distance
 {} = {}
 position
 {}({})
 intToString
-{},{}
+{}, {}
 {}({})
 getNewPosition
-{},{}
+{}, {}
 position
 direction
 3
 {} = {}
 newName
-({}+{})
-({}+{})
+({} + {})
+({} + {})
 position
 '{}'
 _
@@ -462,7 +515,7 @@ uniqueID
 {}.{}
 os
 rename
-{},{}
+{}, {}
 selfName
 newName
 {} = {}
@@ -470,6 +523,7 @@ selfName
 newName
 dedent
 dedent
+
 def {}({}):
 tryToMove
 
@@ -485,13 +539,13 @@ metabolism
 distance
 {}({})
 int
-({}*{})
+({} * {})
 metabolism
 {}({})
 {}.{}
 random
 uniform
-{},{}
+{}, {}
 1
 100
 {}({})
@@ -499,6 +553,7 @@ move
 distance
 dedent
 dedent
+
 def {}({}):
 initiateInteraction
 organisms
@@ -513,6 +568,7 @@ organisms
 interact
 otherName
 dedent
+
 def {}({}):
 interact
 otherName
@@ -527,29 +583,29 @@ otherOrganism
 {}.{}
 subprocess
 Popen
-{},{}
+{}, {}
 [{}]
-{},{}
+{}, {}
 '{}'
 python
 otherName
-{},{}
+{}, {}
 {}={}
 bufsize
 1
-{},{}
+{}, {}
 {}={}
 stdin
 {}.{}
 subprocess
 PIPE
-{},{}
+{}, {}
 {}={}
 stdout
 {}.{}
 subprocess
 PIPE
-{},{}
+{}, {}
 {}={}
 stderr
 {}.{}
@@ -571,6 +627,7 @@ parsedResponse
 fullResponse
 0
 dedent
+
 def {}({}):
 getMessage
 
@@ -592,6 +649,7 @@ json
 dumps
 message
 dedent
+
 def {}({}):
 getAllOrganisms
 world
@@ -625,6 +683,7 @@ dedent
 return {}
 organisms
 dedent
+
 def {}({}):
 findNearbyOrganisms
 organisms
@@ -662,17 +721,17 @@ if {}:
 {} < {}
 {}({})
 abs
-({}-{})
+({} - {})
 organismLocation
 location
 sightDistance
 {} > {}
 {}({})
 abs
-({}-{})
+({} - {})
 organismLocation
 location
-({}-{})
+({} - {})
 1000
 sightDistance
 {}({})
