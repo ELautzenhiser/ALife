@@ -5,7 +5,7 @@ def comma_separated(args):
         return "\n"
     ast_str = ""
     for arg in args[:-1]:
-        ast_str += '{},{}\n'
+        ast_str += '{}, {}\n'
         ast_str += arg
     ast_str += args[-1]
     return ast_str
@@ -14,8 +14,8 @@ operators = { ast.Add: '+', ast.Sub: '-', ast.Mult: '*', ast.Div: '/',
               ast.Mod: '%', ast.Pow: '**', ast.LShift: '<<', ast.RShift: '>>',
               ast.BitOr: '|', ast.BitXor: '^', ast.BitAnd: '&',
               ast.FloorDiv: '//', ast.Lt: '<', ast.LtE: '<=', ast.Gt: '>',
-              ast.GtE: '>=', ast.Eq: '==', ast.NotEq: '!=', ast.Or: ' or ',
-              ast.And: ' and ', ast.In: ' in '}
+              ast.GtE: '>=', ast.Eq: '==', ast.NotEq: '!=', ast.Or: 'or',
+              ast.And: 'and', ast.In: 'in'}
 
 # Appends tree's string representation to ast_str
 def ast2txt(tree, ast_str=''):
@@ -44,7 +44,7 @@ def ast2txt(tree, ast_str=''):
         defaults_start = args_len - defaults_len
         args_list = [ast2txt(arg) for arg in tree.args]
         for i in xrange(defaults_len):
-            args_list[defaults_start + i] = ( '{}={}\n'
+            args_list[defaults_start + i] = ( '{} = {}\n'
                                             + args_list[defaults_start + i]
                                             + ast2txt(tree.defaults[i]) )
         if tree.vararg:
@@ -67,7 +67,7 @@ def ast2txt(tree, ast_str=''):
     # assignments
     if isinstance(tree, ast.Assign):
         for target in tree.targets:
-            ast_str += '{}={}\n'
+            ast_str += '{} = {}\n'
             ast_str += ast2txt(target)
         ast_str += ast2txt(tree.value)
         return ast_str
@@ -147,7 +147,7 @@ def ast2txt(tree, ast_str=''):
 
     # strings
     if isinstance(tree, ast.Str):
-        ast_str += '"{}"\n'
+        ast_str += '\'{}\'\n'
         # avoid quotes errors
         escaped_string = tree.s.replace('\\','\\\\').replace('"','\\"')
         # avoid newline errors
@@ -216,7 +216,7 @@ def ast2txt(tree, ast_str=''):
 
     # augment assignments
     if isinstance(tree, ast.AugAssign):
-        ast_str += '{}' + operators[type(tree.op)] + '={}\n'
+        ast_str += '{} ' + operators[type(tree.op)] + '= {}\n'
         ast_str += ast2txt(tree.target)
         ast_str += ast2txt(tree.value)
         return ast_str
@@ -263,19 +263,19 @@ def ast2txt(tree, ast_str=''):
     # comparisons
     if isinstance(tree, ast.Compare):
         first_op = operators[type(tree.ops[0])]
-        ast_str += '{}' + first_op + '{}\n'
+        ast_str += '{} ' + first_op + ' {}\n'
         ast_str += ast2txt(tree.left)
         for i in range(1,len(tree.ops)):
             next_op = operators[type(tree.ops[i])]
-            ast_str += '{}' + next_op + '{}\n'
+            ast_str += '{} ' + next_op + ' {}\n'
             ast_str += ast2txt(tree.comparators[i-1])
         ast_str += ast2txt(tree.comparators[-1])
         return ast_str
 
     # python lists
     if isinstance(tree, list):
-        print "Warning: ast2txt was called on a list (not an ast object)."
-        ast_str += "Error: ast2txt should not process lists.\n" 
+        print 'Warning: ast2txt was called on a list (not an ast object).'
+        ast_str += 'Error: ast2txt should not process lists.\n'
         return ast_str
 
     # if statements
@@ -294,7 +294,7 @@ def ast2txt(tree, ast_str=''):
 
     # Boolean operations
     if isinstance(tree, ast.BoolOp):
-        ast_str += '({}' + operators[type(tree.op)] + '{})\n'
+        ast_str += '({} ' + operators[type(tree.op)] + ' {})\n'
         for val in tree.values:
             ast_str += ast2txt(val)
         return ast_str
@@ -316,9 +316,9 @@ def ast2txt(tree, ast_str=''):
 
     # except clause
     if isinstance(tree, ast.ExceptHandler):
-        ast_str += 'except {}:\n'
+        ast_str += 'except{}:\n'
         if tree.name:
-            ast_str += '{} as {}\n'
+            ast_str += ' {} as {}\n'
             ast_str += ast2txt(tree.type)
             ast_str += ast2txt(tree.name)
         else:
