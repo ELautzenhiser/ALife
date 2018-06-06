@@ -15,7 +15,7 @@ operators = { ast.Add: '+', ast.Sub: '-', ast.Mult: '*', ast.Div: '/',
               ast.BitOr: '|', ast.BitXor: '^', ast.BitAnd: '&',
               ast.FloorDiv: '//', ast.Lt: '<', ast.LtE: '<=', ast.Gt: '>',
               ast.GtE: '>=', ast.Eq: '==', ast.NotEq: '!=', ast.Or: 'or',
-              ast.And: 'and', ast.In: 'in'}
+              ast.And: 'and', ast.In: 'in', ast.Is: 'is'}
 
 # Appends tree's string representation to ast_str
 def ast2txt(tree, ast_str=''):
