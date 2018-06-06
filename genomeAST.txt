@@ -15,21 +15,21 @@ getTraits
 global {}
 metabolism
 global {}
-codonLength
+codon_length
 global {}
-selfName
+self_name
 global {}
 world
 global {}
-sightDistance
+sight_distance
 {} = {}
 metabolism
 0.5
 {} = {}
-codonLength
+codon_length
 3
 {} = {}
-selfName
+self_name
 {}[{}]
 {}({})
 {}.{}
@@ -57,7 +57,7 @@ os
 getcwd
 
 {} = {}
-sightDistance
+sight_distance
 300
 dedent
 
@@ -72,7 +72,7 @@ genome
 position
 ({} + {})
 position
-codonLength
+codon_length
 {} = {}
 aacid
 {}[{}]
@@ -80,9 +80,9 @@ translation
 codon
 {} += {}
 position
-codonLength
+codon_length
 {} = {}
-newContainer
+new_container
 [{}]
 
 {} = {}
@@ -124,7 +124,7 @@ getTree
 position
 {}({})
 {}.{}
-newContainer
+new_container
 append
 value
 dedent
@@ -136,7 +136,7 @@ aacid
 aacid
 format
 *{}
-newContainer
+new_container
 dedent
 except{}:
 
@@ -327,7 +327,7 @@ def {}({}):
 makeOffspring
 
 {} = {}
-locationID
+location_id
 {}({})
 getRandomString
 {}, {}
@@ -335,7 +335,7 @@ getRandomString
 '{}'
 numbers
 {} = {}
-uniqueID
+unique_id
 {}({})
 getRandomString
 {}, {}
@@ -343,14 +343,14 @@ getRandomString
 '{}'
 alphanumeric
 {} = {}
-offspringName
+offspring_name
 ({} + {})
 ({} + {})
 ({} + {})
-locationID
+location_id
 '{}'
 _
-uniqueID
+unique_id
 '{}'
 .py
 {} = {}
@@ -358,7 +358,7 @@ offspring
 {}({})
 open
 {}, {}
-offspringName
+offspring_name
 '{}'
 w
 {}({})
@@ -445,14 +445,14 @@ def {}({}):
 getNewPosition
 {}, {}
 position
-direction
+distance
 return {}
 ({} % {})
 ({} + {})
 {}({})
 int
 position
-direction
+distance
 1000
 dedent
 
@@ -460,7 +460,7 @@ def {}({}):
 move
 distance
 global {}
-selfName
+self_name
 {} = {}
 ({})
 {}, {}
@@ -468,30 +468,10 @@ position
 uniqueID
 {}({})
 {}.{}
-selfName
+self_name
 split
 '{}'
 _
-if {}:
-{} < {}
-{}.{}
-random
-random
-0.5
-{} = {}
-direction
-1
-dedent
-else:
-{} = {}
-direction
--1
-dedent
-for {} in {}:
-i
-{}({})
-xrange
-distance
 {} = {}
 position
 {}({})
@@ -501,10 +481,10 @@ intToString
 getNewPosition
 {}, {}
 position
-direction
+distance
 3
 {} = {}
-newName
+new_name
 ({} + {})
 ({} + {})
 position
@@ -516,38 +496,43 @@ uniqueID
 os
 rename
 {}, {}
-selfName
-newName
+self_name
+new_name
 {} = {}
-selfName
-newName
-dedent
+self_name
+new_name
 dedent
 
 def {}({}):
 tryToMove
-
+{}, {}
+{} = {}
+end_point
+None
+{} = {}
+motivation
+0
 if {}:
-{} < {}
-{}({})
-{}.{}
-random
-random
-
-metabolism
+({} or {})
+{} is {}
+end_point
+None
+{} == {}
+motivation
+0
 {} = {}
 distance
 {}({})
 int
 ({} * {})
-metabolism
 {}({})
 {}.{}
 random
 uniform
 {}, {}
-1
-100
+-20
+20
+metabolism
 {}({})
 move
 distance
@@ -558,7 +543,7 @@ def {}({}):
 initiateInteraction
 organisms
 {} = {}
-otherName
+other_name
 {}({})
 {}.{}
 random
@@ -566,7 +551,7 @@ choice
 organisms
 {}({})
 interact
-otherName
+other_name
 dedent
 
 def {}({}):
@@ -578,7 +563,7 @@ message
 getMessage
 
 {} = {}
-otherOrganism
+other_organism
 {}({})
 {}.{}
 subprocess
@@ -615,16 +600,16 @@ PIPE
 universal_newlines
 True
 {} = {}
-fullResponse
+full_response
 {}({})
 {}.{}
-otherOrganism
+other_organism
 communicate
 message
 {} = {}
-parsedResponse
+parsed_response
 {}[{}]
-fullResponse
+full_response
 0
 dedent
 
@@ -641,7 +626,7 @@ dict
 message
 '{}'
 acting_organism
-selfName
+self_name
 return {}
 {}({})
 {}.{}
@@ -694,7 +679,7 @@ int
 {}[{}]
 {}({})
 splitName
-selfName
+self_name
 0
 {} = {}
 nearby
@@ -706,9 +691,9 @@ organisms
 if {}:
 {} != {}
 organism
-selfName
+self_name
 {} = {}
-organismLocation
+organism_location
 {}({})
 int
 {}[{}]
@@ -722,18 +707,18 @@ if {}:
 {}({})
 abs
 ({} - {})
-organismLocation
+organism_location
 location
-sightDistance
+sight_distance
 {} > {}
 {}({})
 abs
 ({} - {})
-organismLocation
+organism_location
 location
 ({} - {})
 1000
-sightDistance
+sight_distance
 {}({})
 {}.{}
 nearby
@@ -749,23 +734,23 @@ dedent
 getTraits
 
 {} = {}
-startConditions
+start_conditions
 {}({})
 raw_input
 
 try:
 {} = {}
-startConditions
+start_conditions
 {}({})
 {}.{}
 json
 loads
-startConditions
+start_conditions
 dedent
 except{}:
 
 {} = {}
-startConditions
+start_conditions
 {}({})
 dict
 
@@ -774,19 +759,19 @@ if {}:
 {} != {}
 {}({})
 type
-startConditions
+start_conditions
 dict
 {} = {}
-startConditions
+start_conditions
 {}({})
 dict
 
 dedent
 if {}:
-{} == {}
+{} is {}
 {}({})
 {}.{}
-startConditions
+start_conditions
 get
 '{}'
 acting_organism
