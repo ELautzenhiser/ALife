@@ -13,7 +13,7 @@ When the organism files are run, the organisms reproduce, copying their own geno
 Organisms' code is saved as a text file with each line as a node, and curly brackets indicating a subnode. The code is then converted to a genome string and dictionary for converting that string into executable code.
 
 For instance:
-
+```
 for {} in {}:
 x
 range({})
@@ -23,17 +23,21 @@ print {}
 '{}'
 Num:
 x
-
+```
 would translate to (with codon length 3):
+```
 translation = {'001':'for {} in {}', '002':'x', '003':'range({})', '004':'10',
     '005':'print {}', '006':'{},{}', '007':'"{}"', '008':'Num:', '009':'x'}
 
 genome = '001002003004005006007008009'
+```
 
 The reproduction framework would then translate the genome to:
 
-`for x in range(10):
-    print "Num:",x`
+```
+for x in range(10):
+    print "Num:",x
+```
     
 makeAST can be used to automatically convert the code from a .py file to the flattened AST, and genomeGenerator translates that text file into the genome string and dictionary, which the organisms can translate back into the executable .py code.
 
