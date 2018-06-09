@@ -7,7 +7,9 @@ random
 os
 {}, {}
 json
+{}, {}
 subprocess
+numpy.random
 
 def {}({}):
 getTraits
@@ -24,7 +26,7 @@ global {}
 sight_distance
 {} = {}
 metabolism
-0.5
+20
 {} = {}
 codon_length
 3
@@ -60,6 +62,7 @@ getcwd
 sight_distance
 300
 dedent
+
 
 def {}({}):
 getTree
@@ -153,6 +156,7 @@ return {}
 aacid
 position
 dedent
+
 
 def {}({}):
 translate
@@ -269,6 +273,7 @@ return {}
 output
 dedent
 
+
 def {}({}):
 getRandomString
 {}, {}
@@ -322,6 +327,7 @@ dedent
 return {}
 string
 dedent
+
 
 def {}({}):
 makeOffspring
@@ -399,6 +405,7 @@ close
 
 dedent
 
+
 def {}({}):
 splitName
 name
@@ -410,6 +417,7 @@ split
 '{}'
 _
 dedent
+
 
 def {}({}):
 intToString
@@ -441,6 +449,7 @@ return {}
 num
 dedent
 
+
 def {}({}):
 getNewPosition
 {}, {}
@@ -456,6 +465,7 @@ distance
 1000
 dedent
 
+
 def {}({}):
 move
 distance
@@ -467,11 +477,8 @@ self_name
 position
 uniqueID
 {}({})
-{}.{}
+splitName
 self_name
-split
-'{}'
-_
 {} = {}
 position
 {}({})
@@ -503,6 +510,7 @@ self_name
 new_name
 dedent
 
+
 def {}({}):
 tryToMove
 {}, {}
@@ -513,31 +521,127 @@ None
 motivation
 0
 if {}:
-({} or {})
 {} is {}
 end_point
 None
-{} == {}
-motivation
-0
 {} = {}
 distance
 {}({})
 int
-({} * {})
 {}({})
 {}.{}
+{}.{}
+numpy
 random
-uniform
+normal
 {}, {}
--20
-20
+0
 metabolism
 {}({})
 move
 distance
 dedent
+else:
+{} = {}
+position
+{}({})
+int
+{}[{}]
+{}({})
+splitName
+self_name
+0
+{} = {}
+distance_one
+({} + {})
+({} - {})
+1000
+{}({})
+max
+{}, {}
+end_point
+position
+{}({})
+min
+{}, {}
+end_point
+position
+{} = {}
+distance_two
+{}({})
+abs
+({} - {})
+end_point
+position
+{} = {}
+shortest_distance
+{}({})
+min
+{}, {}
+distance_one
+distance_two
+if {}:
+{} < {}
+end_point
+position
+{} = {}
+stimulus_direction
+-1
 dedent
+else:
+{} = {}
+stimulus_direction
+1
+dedent
+{} = {}
+distance
+{}({})
+int
+{}({})
+{}.{}
+{}.{}
+numpy
+random
+normal
+{}, {}
+({} * {})
+({} * {})
+stimulus_direction
+motivation
+metabolism
+metabolism
+if {}:
+({} and {})
+{} > {}
+motivation
+0
+{} > {}
+{}({})
+abs
+distance
+shortest_distance
+if {}:
+{} > {}
+distance
+0
+{} = {}
+distance
+shortest_distance
+dedent
+else:
+{} = {}
+distance
+{}{}
+-shortest_distance
+
+dedent
+dedent
+{}({})
+move
+distance
+dedent
+dedent
+
 
 def {}({}):
 initiateInteraction
@@ -554,9 +658,10 @@ interact
 other_name
 dedent
 
+
 def {}({}):
 interact
-otherName
+other_name
 {} = {}
 message
 {}({})
@@ -573,7 +678,7 @@ Popen
 {}, {}
 '{}'
 python
-otherName
+other_name
 {}, {}
 {}={}
 bufsize
@@ -611,7 +716,10 @@ parsed_response
 {}[{}]
 full_response
 0
+print {}
+parsed_response
 dedent
+
 
 def {}({}):
 getMessage
@@ -627,6 +735,20 @@ message
 '{}'
 acting_organism
 self_name
+{} = {}
+{}[{}]
+message
+'{}'
+friendliness
+{}({})
+{}.{}
+{}.{}
+numpy
+random
+normal
+{}, {}
+0
+1
 return {}
 {}({})
 {}.{}
@@ -634,6 +756,7 @@ json
 dumps
 message
 dedent
+
 
 def {}({}):
 getAllOrganisms
@@ -668,6 +791,7 @@ dedent
 return {}
 organisms
 dedent
+
 
 def {}({}):
 findNearbyOrganisms
@@ -730,6 +854,7 @@ dedent
 return {}
 nearby
 dedent
+
 {}({})
 getTraits
 
@@ -800,9 +925,35 @@ makeOffspring
 
 dedent
 else:
+{} = {}
+other_location
+{}({})
+int
+{}[{}]
+{}({})
+splitName
+{}({})
+{}.{}
+start_conditions
+get
+'{}'
+acting_organism
+0
+{} = {}
+other_friendliness
+{}({})
+float
+{}({})
+{}.{}
+start_conditions
+get
+'{}'
+friendliness
 {}({})
 tryToMove
-
+{}, {}
+other_location
+other_friendliness
 print {}
 {}({})
 getMessage
