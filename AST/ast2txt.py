@@ -15,7 +15,8 @@ operators = { ast.Add: '+', ast.Sub: '-', ast.Mult: '*', ast.Div: '/',
               ast.BitOr: '|', ast.BitXor: '^', ast.BitAnd: '&',
               ast.FloorDiv: '//', ast.Lt: '<', ast.LtE: '<=', ast.Gt: '>',
               ast.GtE: '>=', ast.Eq: '==', ast.NotEq: '!=', ast.Or: 'or',
-              ast.And: 'and', ast.In: 'in', ast.Is: 'is'}
+              ast.And: 'and', ast.In: 'in', ast.Is: 'is', ast.USub: '-',
+              ast.UAdd: '+'}
 
 # Appends tree's string representation to ast_str
 def ast2txt(tree, ast_str=''):
@@ -34,7 +35,7 @@ def ast2txt(tree, ast_str=''):
         ast_str += ast2txt(tree.args)
         for node in tree.body:
             ast_str += ast2txt(node)
-        ast_str += 'dedent\n'
+        ast_str += 'dedent\n\n'
         return ast_str
 
     # function arguments
@@ -331,5 +332,12 @@ def ast2txt(tree, ast_str=''):
     if isinstance(tree, type(None)):
         return ast_str + '\n'
 
+    if isinstance(tree, ast.UnaryOp):
+        ast_str += '{}{}\n'
+        ast_str += operators[type(tree.op)]
+        ast_str += ast2txt(tree.operand) + '\n'
+        return ast_str
+
+
     print "Did not know what to do with",type(tree)
-    return ast_str + 'NOT IMPLEMENTED\n'
+    return ast_str + '#NOT IMPLEMENTED\n'
