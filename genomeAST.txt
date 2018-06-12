@@ -24,6 +24,8 @@ global {}
 world
 global {}
 sight_distance
+global {}
+neutrality
 {} = {}
 metabolism
 20
@@ -61,6 +63,9 @@ getcwd
 {} = {}
 sight_distance
 300
+{} = {}
+neutrality
+0.5
 dedent
 
 
@@ -330,16 +335,54 @@ dedent
 
 
 def {}({}):
+getChildLocation
+parent_location
+{} = {}
+parent_location
+{}({})
+int
+parent_location
+{} = {}
+child_location
+{}({})
+{}.{}
+{}.{}
+numpy
+random
+normal
+{}, {}
+parent_location
+30
+{} = {}
+child_location
+({} % {})
+child_location
+1000
+return {}
+{}({})
+intToString
+{}, {}
+child_location
+3
+dedent
+
+
+def {}({}):
 makeOffspring
 
 {} = {}
+({})
+{}, {}
+self_location
+self_unique_id
+{}({})
+splitName
+self_name
+{} = {}
 location_id
 {}({})
-getRandomString
-{}, {}
-3
-'{}'
-numbers
+getChildLocation
+self_location
 {} = {}
 unique_id
 {}({})
@@ -722,8 +765,47 @@ dedent
 
 
 def {}({}):
-getMessage
+determineFriendliness
+**{}
+kwargs
+if {}:
+{}({})
+{}.{}
+kwargs
+get
+'{}'
+other_friendliness
+{} = {}
+friendliness
+({} * {})
+{}[{}]
+kwargs
+'{}'
+other_friendliness
+neutrality
+dedent
+else:
+{} = {}
+friendliness
+{}({})
+{}.{}
+{}.{}
+numpy
+random
+normal
+{}, {}
+0
+1
+dedent
+return {}
+friendliness
+dedent
 
+
+def {}({}):
+getMessage
+**{}
+kwargs
 {} = {}
 message
 {}({})
@@ -741,14 +823,9 @@ message
 '{}'
 friendliness
 {}({})
-{}.{}
-{}.{}
-numpy
-random
-normal
-{}, {}
-0
-1
+determineFriendliness
+**{}
+kwargs
 return {}
 {}({})
 {}.{}
@@ -926,18 +1003,21 @@ makeOffspring
 dedent
 else:
 {} = {}
-other_location
-{}({})
-int
-{}[{}]
-{}({})
-splitName
+other_organism
 {}({})
 {}.{}
 start_conditions
 get
 '{}'
 acting_organism
+{} = {}
+other_location
+{}({})
+int
+{}[{}]
+{}({})
+splitName
+other_organism
 0
 {} = {}
 other_friendliness
@@ -957,5 +1037,11 @@ other_friendliness
 print {}
 {}({})
 getMessage
-
+{}, {}
+{}={}
+other_organism
+other_organism
+{}={}
+other_friendliness
+other_friendliness
 dedent
