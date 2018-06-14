@@ -280,57 +280,16 @@ dedent
 
 
 def {}({}):
-getRandomString
-{}, {}
-length
-kind
-if {}:
-{} == {}
-kind
-'{}'
-letters
-{} = {}
-chars
-'{}'
-abcdefghijklmnopqrstuvwxyz
-dedent
-else:
-if {}:
-{} == {}
-kind
-'{}'
-numbers
-{} = {}
-chars
-'{}'
-0123456789
-dedent
-else:
-{} = {}
-chars
-'{}'
-0123456789abcdefghijklmnopqrstuvwxyz
-dedent
-dedent
-{} = {}
-string
-'{}'
-
-for {} in {}:
-i
-{}({})
-range
-length
-{} += {}
-string
-{}({})
-{}.{}
-random
-choice
-chars
-dedent
+floatToInt
+float
 return {}
-string
+{}({})
+int
+{}({})
+round
+{}, {}
+float
+0
 dedent
 
 
@@ -344,6 +303,8 @@ int
 parent_location
 {} = {}
 child_location
+{}({})
+floatToInt
 {}({})
 {}.{}
 {}.{}
@@ -368,51 +329,111 @@ dedent
 
 
 def {}({}):
+mutateChar
+{}, {}
+char
+mutability
+{} = {}
+chars
+'{}'
+0123456789abcdefghijklmnopqrstuvwxyz
+{} = {}
+char_index
+{}({})
+{}.{}
+chars
+index
+char
+{} = {}
+new_char_index
+({} % {})
+{}({})
+floatToInt
+{}({})
+{}.{}
+{}.{}
+numpy
+random
+normal
+{}, {}
+char_index
+mutability
+{}({})
+len
+chars
+return {}
+{}[{}]
+chars
+new_char_index
+dedent
+
+
+def {}({}):
+getChildId
+parent_id
+{} = {}
+child_id
+'{}'
+
+for {} in {}:
+char
+parent_id
+{} += {}
+child_id
+{}({})
+mutateChar
+{}, {}
+char
+0.75
+dedent
+return {}
+child_id
+dedent
+
+
+def {}({}):
 makeOffspring
 
 {} = {}
 ({})
 {}, {}
 self_location
-self_unique_id
+self_id
 {}({})
 splitName
 self_name
 {} = {}
-location_id
+child_location
 {}({})
 getChildLocation
 self_location
 {} = {}
-unique_id
+child_id
 {}({})
-getRandomString
-{}, {}
-8
-'{}'
-alphanumeric
+getChildId
+self_id
 {} = {}
-offspring_name
+child_name
 ({} + {})
 ({} + {})
 ({} + {})
-location_id
+child_location
 '{}'
 _
-unique_id
+child_id
 '{}'
 .py
 {} = {}
-offspring
+child
 {}({})
 open
 {}, {}
-offspring_name
+child_name
 '{}'
 w
 {}({})
 {}.{}
-offspring
+child
 write
 ({} + {})
 '{}'
@@ -422,7 +443,7 @@ str
 translation
 {}({})
 {}.{}
-offspring
+child
 write
 ({} + {})
 ({} + {})
@@ -436,14 +457,14 @@ genome
 \"
 {}({})
 {}.{}
-offspring
+child
 write
 {}({})
 translate
 
 {}({})
 {}.{}
-offspring
+child
 close
 
 dedent
@@ -452,6 +473,16 @@ dedent
 def {}({}):
 splitName
 name
+{} = {}
+name
+{}[{}]
+{}({})
+{}.{}
+name
+split
+'{}'
+.
+0
 return {}
 {}({})
 {}.{}
@@ -518,7 +549,7 @@ self_name
 ({})
 {}, {}
 position
-uniqueID
+unique_id
 {}({})
 splitName
 self_name
@@ -537,10 +568,13 @@ distance
 new_name
 ({} + {})
 ({} + {})
+({} + {})
 position
 '{}'
 _
-uniqueID
+unique_id
+'{}'
+.py
 {}({})
 {}.{}
 os
