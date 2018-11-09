@@ -183,3 +183,4 @@ def makeOrganism(ast_file, codon_length, location_id, unique_id):
 
 if __name__ == '__main__':
     makeOrganism('genomeAST.txt', 3, '000', 'aaaaaaaa')
+    print "Completed"

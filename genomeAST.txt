@@ -70,6 +70,14 @@ dedent
 
 
 def {}({}):
+cut
+
+return {}
+
+dedent
+
+
+def {}({}):
 getTree
 position
 {} = {}
@@ -280,6 +288,14 @@ dedent
 
 
 def {}({}):
+cut
+
+return {}
+
+dedent
+
+
+def {}({}):
 floatToInt
 float
 return {}
@@ -369,6 +385,118 @@ dedent
 
 
 def {}({}):
+getCutPoint
+
+return {}
+({} + {})
+({} + {})
+({} + {})
+({} + {})
+({} + {})
+({} + {})
+'{}'
+009
+'{}'
+035
+'{}'
+008
+'{}'
+036
+'{}'
+008
+'{}'
+034
+'{}'
+008
+dedent
+
+
+def {}({}):
+getChildGenome
+{} = {}
+other_genome
+'{}'
+
+if {}:
+{} == {}
+other_genome
+'{}'
+
+return {}
+genome
+dedent
+{} = {}
+cut_point
+{}({})
+getCutPoint
+
+{} = {}
+split_genome1
+{}({})
+{}.{}
+genome
+split
+cut_point
+{} = {}
+split_genome2
+{}({})
+{}.{}
+genome
+split
+cut_point
+{} = {}
+child_genome
+[{}]
+
+for {} in {}:
+i
+{}({})
+range
+{}({})
+min
+{}, {}
+{}({})
+len
+split_genome1
+{}({})
+len
+split_genome2
+if {}:
+{} < {}
+{}({})
+{}.{}
+random
+random
+
+0.5
+{}({})
+{}.{}
+child_genome
+append
+{}[{}]
+split_genome1
+i
+dedent
+else:
+{}({})
+{}.{}
+child_genome
+append
+{}[{}]
+split_genome2
+i
+dedent
+dedent
+return {}
+{}({})
+{}.{}
+cut_point
+join
+child_genome
+dedent
+
+
+def {}({}):
 getChildId
 parent_id
 {} = {}
@@ -393,6 +521,9 @@ dedent
 
 def {}({}):
 makeOffspring
+{} = {}
+other_genome
+'{}'
 
 {} = {}
 ({})
@@ -424,6 +555,11 @@ child_id
 '{}'
 .py
 {} = {}
+child_genome
+{}({})
+getChildGenome
+other_genome
+{} = {}
 child
 {}({})
 open
@@ -452,7 +588,7 @@ write
 \n
 '{}'
 genome = \"
-genome
+child_genome
 '{}'
 \"
 {}({})
@@ -585,6 +721,14 @@ new_name
 {} = {}
 self_name
 new_name
+dedent
+
+
+def {}({}):
+cut
+
+return {}
+
 dedent
 
 
@@ -730,6 +874,7 @@ other_name
 random
 choice
 organisms
+return {}
 {}({})
 interact
 other_name
@@ -793,7 +938,7 @@ parsed_response
 {}[{}]
 full_response
 0
-print {}
+return {}
 parsed_response
 dedent
 
@@ -860,6 +1005,12 @@ friendliness
 determineFriendliness
 **{}
 kwargs
+{} = {}
+{}[{}]
+message
+'{}'
+genome
+genome
 return {}
 {}({})
 {}.{}
@@ -966,6 +1117,82 @@ return {}
 nearby
 dedent
 
+
+def {}({}):
+react
+start_conditions
+{} = {}
+other_organism
+{}({})
+{}.{}
+start_conditions
+get
+'{}'
+acting_organism
+{} = {}
+other_location
+{}({})
+int
+{}[{}]
+{}({})
+splitName
+other_organism
+0
+{} = {}
+other_friendliness
+{}({})
+float
+{}({})
+{}.{}
+start_conditions
+get
+'{}'
+friendliness
+{}({})
+tryToMove
+{}, {}
+other_location
+other_friendliness
+if {}:
+{} < {}
+{}({})
+{}.{}
+random
+random
+
+other_friendliness
+{} = {}
+other_genome
+{}({})
+{}.{}
+start_conditions
+get
+'{}'
+genome
+{}({})
+makeOffspring
+other_genome
+dedent
+print {}
+{}({})
+getMessage
+{}, {}
+{}={}
+other_organism
+other_organism
+{}={}
+other_friendliness
+other_friendliness
+dedent
+
+
+def {}({}):
+cut
+
+return {}
+
+dedent
+
 {}({})
 getTraits
 
@@ -1027,55 +1254,20 @@ findNearbyOrganisms
 organisms
 if {}:
 nearby
+{} = {}
+interaction_result
 {}({})
 initiateInteraction
 nearby
 dedent
+else:
 {}({})
 makeOffspring
 
 dedent
+dedent
 else:
-{} = {}
-other_organism
 {}({})
-{}.{}
+react
 start_conditions
-get
-'{}'
-acting_organism
-{} = {}
-other_location
-{}({})
-int
-{}[{}]
-{}({})
-splitName
-other_organism
-0
-{} = {}
-other_friendliness
-{}({})
-float
-{}({})
-{}.{}
-start_conditions
-get
-'{}'
-friendliness
-{}({})
-tryToMove
-{}, {}
-other_location
-other_friendliness
-print {}
-{}({})
-getMessage
-{}, {}
-{}={}
-other_organism
-other_organism
-{}={}
-other_friendliness
-other_friendliness
 dedent
