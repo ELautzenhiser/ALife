@@ -173,7 +173,7 @@ dedent
 
 def {}({}):
 translate
-
+genome
 {} = {}
 output
 '{}'
@@ -345,6 +345,46 @@ dedent
 
 
 def {}({}):
+mutateNum
+{}, {}
+num
+mutability
+{} = {}
+nums
+'{}'
+0123456789
+{} = {}
+num_index
+{}({})
+{}.{}
+nums
+index
+num
+{} = {}
+new_num_index
+({} % {})
+{}({})
+floatToInt
+{}({})
+{}.{}
+{}.{}
+numpy
+random
+normal
+{}, {}
+num_index
+mutability
+{}({})
+len
+nums
+return {}
+{}[{}]
+nums
+new_num_index
+dedent
+
+
+def {}({}):
 mutateChar
 {}, {}
 char
@@ -422,9 +462,11 @@ if {}:
 other_genome
 '{}'
 
-return {}
+{} = {}
+child_genome
 genome
 dedent
+else:
 {} = {}
 cut_point
 {}({})
@@ -487,12 +529,31 @@ split_genome2
 i
 dedent
 dedent
-return {}
+{} = {}
+child_genome
 {}({})
 {}.{}
 cut_point
 join
 child_genome
+dedent
+{} = {}
+mutated_genome
+'{}'
+
+for {} in {}:
+num
+child_genome
+{} += {}
+mutated_genome
+{}({})
+mutateNum
+{}, {}
+num
+0.15
+dedent
+return {}
+mutated_genome
 dedent
 
 
@@ -597,7 +658,7 @@ child
 write
 {}({})
 translate
-
+child_genome
 {}({})
 {}.{}
 child
